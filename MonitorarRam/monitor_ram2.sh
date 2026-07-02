@@ -3,8 +3,8 @@
 # verifiva o uso da memoria ram total e de cada aplicativo em processo
 # se passar do limite de ram, vai gerar um arquivo de log com alerta, e um balao de alerta
 
-LIMITE_RAM_TOTAL=10     # porcentagem da ram total que vai disparar o alerta
-LIMITE_RAM_PROCESSO=1    # porcentagem da ram do processo especifico que vai disparar o alerta
+LIMITE_RAM_TOTAL=80     # porcentagem da ram total que vai disparar o alerta
+LIMITE_RAM_PROCESSO=20    # porcentagem da ram do processo especifico que vai disparar o alerta
 INTERVALO=5                # intervalo em segundos da verificacao
 LOG_FILE="$HOME/monitor_ram.log"
 
