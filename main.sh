@@ -8,6 +8,7 @@ echo "          2. Atualizar Aplicações                 "
 echo "          3. Definir Bloqueio de Aplicações       "
 echo "          4. Monitorar Uso de Memória RAM         "
 echo "          5. Sair                                 "
+echo "=================================================="
 read -p "Escolha uma das opções: " opcao
 
 if [[ "$opcao" -eq 1 ]]; then
