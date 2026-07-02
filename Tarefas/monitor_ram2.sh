@@ -24,35 +24,38 @@ alerta() {
 	fi
 }
 
-echo "Limite do sistema: ${LIMITE_RAM_TOTAL}% | Limite por processo: ${LIMITE_RAM_PROCESSO}%"
-echo "Log sendo salvo em: $LOG_FILE"
-echo "Ctrl+C para parar."
+#coloquei a parte "principal" dentro de uma funcao pra poder chamar direto no main.sh que é o arquivo que chamara tudo de uma vez.
+monitorarRam(){
+	echo "Limite do sistema: ${LIMITE_RAM_TOTAL}% | Limite por processo: ${LIMITE_RAM_PROCESSO}%"
+	echo "Log sendo salvo em: $LOG_FILE"
+	echo "Ctrl+C para parar."
 
-while true
-do
-	# procura o uso da memoria e a linha que comeca com "mem", e calcula pra porcentagem
-	# esse awk vai permitir pegar o valor e ja calcular a porcentagem, o sed nao funcionaria nesse caso porque nao faz conta de forma nativa e deixaria bem mais complicado
-    	porcent_total=$(free | awk '/^Mem:/ {printf "%.0f", $3/$2 * 100}')
+	while true
+	do
+		# procura o uso da memoria e a linha que comeca com "mem", e calcula pra porcentagem
+		# esse awk vai permitir pegar o valor e ja calcular a porcentagem, o sed nao funcionaria nesse caso porque nao faz conta de forma nativa e deixaria bem mais complicado
+			porcent_total=$(free | awk '/^Mem:/ {printf "%.0f", $3/$2 * 100}')
 
-    	if [[ $porcent_total -ge $LIMITE_RAM_TOTAL ]]
-    	then
-        	alerta "ALERTA: Uso geral de RAM do sistema está em ${porcent_total}%"
-    	fi
+			if [[ $porcent_total -ge $LIMITE_RAM_TOTAL ]]
+			then
+				alerta "ALERTA: Uso geral de RAM do sistema está em ${porcent_total}%"
+			fi
 
-	# lista o que esta em processo, mostrando o id, a % de memoria e o nome do maior pro menor em uso de memoria
-    	ps -eo pid,%mem,comm --sort=-%mem | tail -n +2 | while read -r pid mem comm
-    	do
-        	#pelo que parece o bash nao calcula ponto flutuante, e eu nao entendi como que faz, então substitui o . e o que vier depois por nada quando ele for ler a memoria usando o sed
-		mem_inteiro=$(echo "$mem" | sed 's/\..*//')
-        
-        	: "${mem_inteiro:=0}"
+		# lista o que esta em processo, mostrando o id, a % de memoria e o nome do maior pro menor em uso de memoria
+			ps -eo pid,%mem,comm --sort=-%mem | tail -n +2 | while read -r pid mem comm
+			do
+				#pelo que parece o bash nao calcula ponto flutuante, e eu nao entendi como que faz, então substitui o . e o que vier depois por nada quando ele for ler a memoria usando o sed
+			mem_inteiro=$(echo "$mem" | sed 's/\..*//')
+			
+				: "${mem_inteiro:=0}"
 
-        	if [[ $mem_inteiro -ge $LIMITE_RAM_PROCESSO ]]
-        	then
-            
-            		alerta "ALERTA: '$comm' (PID $pid) está usando ${mem}% de RAM"
-        	fi
-    	done
+				if [[ $mem_inteiro -ge $LIMITE_RAM_PROCESSO ]]
+				then
+				
+						alerta "ALERTA: '$comm' (PID $pid) está usando ${mem}% de RAM"
+				fi
+			done
 
-    	sleep "$INTERVALO"
-done
+			sleep "$INTERVALO"
+	done
+}
