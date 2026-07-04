@@ -44,7 +44,7 @@ monitorarRam(){
 		# lista o que esta em processo, mostrando o id, a % de memoria e o nome do maior pro menor em uso de memoria
 			ps -eo pid,%mem,comm --sort=-%mem | tail -n +2 | while read -r pid mem comm
 			do
-				#pelo que parece o bash nao calcula ponto flutuante, e eu nao entendi como que faz, então substitui o . e o que vier depois por nada quando ele for ler a memoria usando o sed
+				
 			mem_inteiro=$(echo "$mem" | sed 's/\..*//')
 			
 				: "${mem_inteiro:=0}"
