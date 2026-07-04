@@ -15,7 +15,7 @@ agendarAtualizacao(){
 
 	#Verifica no crontab se já existe um agendamento anterior dessa tarefa
 	#Se existe, exclui e adiciona o novo agendamento
-	if [[ grep -q ~/agendarTarefa/atualizarProgramas.sh /etc/crontab ]]
+	if [[ grep -q ~/Tarefas/atualizarProgramas.sh /etc/crontab ]]
 	then
 		grep -q atualizarProgramas.sh /etc/crontab | sed /etc/crontab;
 		

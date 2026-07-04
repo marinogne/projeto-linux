@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 
-source "./tarefas/agendar.sh"
-source "./tarefas/atualizarProgramas.sh"
-source "./tarefas/Monitorador.sh"
-source "./tarefas/bloqueioUso.sh"
-source "./tarefas/monitora_ram.sh"
+source "./Tarefas/agendar.sh"
+source "./Tarefas/atualizarProgramas.sh"
+source "./Tarefas/Monitorador.sh"
+source "./Tarefas/bloqueiouso.sh"
+source "./Tarefas/monitora_ram.sh"
 
 
 echo "=================================================="
@@ -29,7 +29,7 @@ elif [[ "$opcao" -eq 3 ]]; then
 elif [[ "$opcao" -eq 4 ]]; then
     echo "Carregando..."
     monitorarRam
-elif [[ "$opcao" -eq 5]]; then
+elif [[ "$opcao" -eq 5 ]]; then
     echo "Saindo..."
     exit 0
 else
