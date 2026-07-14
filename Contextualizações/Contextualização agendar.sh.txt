@@ -19,7 +19,7 @@ https://www.reddit.com/r/linuxquestions/comments/11yk60h/how_to_pass_a_variable_
 
 Uso de IA:
 
-Usei o chatGPT três vezes para verificar e corrigir a sintaxe do script. Correções e verificações:
+Usei o chatGPT quatro vezes para verificar e corrigir a sintaxe do script. Correções e verificações:
 
 	Corrigiu read -p "..." $variavel para read -p "..." variável;
 	Corrigiu #!usr/bin/env bash para #!/usr/bin/env bash;
@@ -27,4 +27,8 @@ Usei o chatGPT três vezes para verificar e corrigir a sintaxe do script. Corre�
 	Descobri que uma versão anterior do comando para o crontab estava errado, mas fiz a correção de acordo com a bibliografia encontrada;
 	Arrumou o %date para $(date); 
 	Arrumou $horario para “$horario”;
-		Fez o mesmo para horarioFormatado em echo, mas com os \\ para ficar válido.
+		Fez o mesmo para horarioFormatado em echo, mas com os \\ para ficar válido;
+	Arrumou a parte que achava o agendamento no crontab e apagava:
+		Arrumou o caminho usado no agendamento;
+		Trocou a linha que acha o agendamento e a que apaga;
+		Colocou sudo;
