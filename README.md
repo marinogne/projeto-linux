@@ -1,4 +1,4 @@
-9# Pensamento de Software:
+# Projeto Final:
 >  Um Sistema de Agendamento, Gerenciamento e Monitoramento de Software.
 
 ## Descrição
@@ -67,12 +67,12 @@ projeto-linux/
 
 ## Divisão de Tarefas (Equipe)
 
-| Membro | Tarefa | Responsabilidade |
-|---|---|---|
-| Julia | Tempo e Checagem | Agendamento via cron e busca da lista de softwares a atualizar, vídeo de funcionamento do projeto|
-| Felipe | Inteligência de Atualização e Testes | Identificação dos programas mais usados e execução das atualizações |
-| Luana | Restrição de Uso | Bloqueio de softwares por horário e encerramento de processos |
-| Mariana | Recursos, Alertas e Documentação | Monitoramento de RAM, alertas e organização do repositório |
+| Membro | RA | Tarefa | Responsabilidade |
+|---|---|---|---|
+| Julia | 312367 |Tempo e Checagem | Agendamento via cron e busca da lista de softwares a atualizar, vídeo de funcionamento do projeto|
+| Felipe | 321258 | Inteligência de Atualização e Testes | Identificação dos programas mais usados e execução das atualizações |
+| Luana | 312376 | Restrição de Uso | Bloqueio de softwares por horário e encerramento de processos |
+| Mariana | 312389 | Recursos, Alertas e Documentação | Monitoramento de RAM, alertas e organização do repositório |
 
 
 ## Utilização de IA e Bibliografia
