@@ -1,5 +1,14 @@
 # Projeto Final:
 >  Um Sistema de Agendamento, Gerenciamento e Monitoramento de Software.
+> 
+## Divisão de Tarefas (Equipe)
+
+| Membro | RA | Tarefa | Responsabilidade |
+|---|---|---|---|
+| Julia | 312367 |Tempo e Checagem | Agendamento via cron e busca da lista de softwares a atualizar, vídeo de funcionamento do projeto|
+| Felipe | 321258 | Inteligência de Atualização e Testes | Identificação dos programas mais usados e execução das atualizações |
+| Luana | 312376 | Restrição de Uso | Bloqueio de softwares por horário e encerramento de processos |
+| Mariana | 312389 | Recursos, Alertas e Documentação | Monitoramento de RAM, alertas e organização do repositório |
 
 ## Descrição
 O nosso Projeto automatiza o funcionamento de atualizações, monitoramento de memória RAM e o bloqueio de uso de Aplicações com um Menu Interativo.
@@ -64,16 +73,6 @@ projeto-linux/
    ```
 
 > **Observação:** as opções 1 e 2 utilizam `sudo apt install`, então pode ser solicitada a senha do usuário durante a execução.
-
-## Divisão de Tarefas (Equipe)
-
-| Membro | RA | Tarefa | Responsabilidade |
-|---|---|---|---|
-| Julia | 312367 |Tempo e Checagem | Agendamento via cron e busca da lista de softwares a atualizar, vídeo de funcionamento do projeto|
-| Felipe | 321258 | Inteligência de Atualização e Testes | Identificação dos programas mais usados e execução das atualizações |
-| Luana | 312376 | Restrição de Uso | Bloqueio de softwares por horário e encerramento de processos |
-| Mariana | 312389 | Recursos, Alertas e Documentação | Monitoramento de RAM, alertas e organização do repositório |
-
 
 ## Utilização de IA e Bibliografia
 | Bibliografia |
