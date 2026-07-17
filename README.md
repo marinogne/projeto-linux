@@ -5,10 +5,10 @@
 
 | Membro | RA | Tarefa | Responsabilidade |
 |---|---|---|---|
-| Julia | 312367 |Tempo e Checagem | Agendamento via cron e busca da lista de softwares a atualizar, vídeo de funcionamento do projeto|
-| Felipe | 321258 | Inteligência de Atualização e Testes | Identificação dos programas mais usados e execução das atualizações |
-| Luana | 312376 | Restrição de Uso | Bloqueio de softwares por horário e encerramento de processos |
-| Mariana | 312389 | Recursos, Alertas e Documentação | Monitoramento de RAM, alertas e organização do repositório |
+| Julia Christina Fraga De Brito | 312367 |Tempo e Checagem | Agendamento via cron e busca da lista de softwares a atualizar, vídeo de funcionamento do projeto|
+| Felipe Guirau da Silva | 321258 | Inteligência de Atualização e Testes | Identificação dos programas mais usados e execução das atualizações |
+| Luana Gomes Santos | 312376 | Restrição de Uso | Bloqueio de softwares por horário e encerramento de processos |
+| Mariana Nogueira Neves | 312389 | Recursos, Alertas e Documentação | Monitoramento de RAM, alertas e organização do repositório |
 
 ## Descrição
 O nosso Projeto automatiza o funcionamento de atualizações, monitoramento de memória RAM e o bloqueio de uso de Aplicações com um Menu Interativo.
